@@ -1,2 +1,2 @@
-# LP_Homework_1
-Homework Lesson 1 for LearnPython
+# Домашняя работа. Урок 1
+Домашняя работа для LearnPython. Урок 1.
