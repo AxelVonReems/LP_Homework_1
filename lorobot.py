@@ -17,6 +17,7 @@ secret_token = SECRET_TOKEN
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обработка функции бота /start."""
     user_name = update.effective_chat.first_name,
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
@@ -25,6 +26,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def talk_to_me(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Обработка функции пересылки сообщения пользователя обратно."""
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
         text=update.message.text
@@ -32,6 +34,7 @@ async def talk_to_me(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
+    """Главная функция бота."""
     application = ApplicationBuilder().token(secret_token).build()
 
     start_handler = CommandHandler('start', start)
